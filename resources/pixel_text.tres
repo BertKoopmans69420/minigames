@@ -1,7 +1,20 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://da66cxf8l3rq8"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://da66cxf8l3rq8"]
 
 [ext_resource type="FontFile" uid="uid://m1021y6um42d" path="res://resources/Robot Crush.ttf" id="1_8qddp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2447a"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egv5u"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuoh8"]
+bg_color = Color(0, 0, 0, 1)
 
 [resource]
 default_font = ExtResource("1_8qddp")
 default_font_size = 55
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_2447a")
+Button/styles/normal = SubResource("StyleBoxFlat_egv5u")
+Button/styles/pressed = SubResource("StyleBoxFlat_tuoh8")
