@@ -1,20 +1,56 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://da66cxf8l3rq8"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://da66cxf8l3rq8"]
 
 [ext_resource type="FontFile" uid="uid://m1021y6um42d" path="res://resources/Robot Crush.ttf" id="1_8qddp"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42qbe"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 4
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2447a"]
 bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5low"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egv5u"]
 bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuoh8"]
 bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [resource]
 default_font = ExtResource("1_8qddp")
 default_font_size = 55
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_42qbe")
 Button/styles/hover = SubResource("StyleBoxFlat_2447a")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_m5low")
 Button/styles/normal = SubResource("StyleBoxFlat_egv5u")
 Button/styles/pressed = SubResource("StyleBoxFlat_tuoh8")
