@@ -1,0 +1,177 @@
+[gd_scene load_steps=8 format=3 uid="uid://bx2lrhjskmehr"]
+
+[ext_resource type="Script" uid="uid://d18x3ucuvj4f" path="res://game/pong/pong.gd" id="1_0lln7"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="1_s7j6r"]
+[ext_resource type="PackedScene" uid="uid://dkskikjqnium3" path="res://game/pong/pong_player.tscn" id="2_pnoxi"]
+[ext_resource type="PackedScene" uid="uid://40wt8sb3qw2u" path="res://game/pong/pong_ball.tscn" id="3_1xeuo"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/pixel_text.tres" id="5_0lln7"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_s7j6r"]
+a = Vector2(1152, 2)
+b = Vector2(0, 2)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kbmwp"]
+a = Vector2(1152, 646)
+b = Vector2(0, 646)
+
+[node name="Pong" type="Node2D"]
+script = ExtResource("1_0lln7")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+scale = Vector2(9, 5.0625)
+texture = ExtResource("1_s7j6r")
+centered = false
+
+[node name="Border" type="StaticBody2D" parent="."]
+
+[node name="SingleColor" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 2)
+scale = Vector2(9, 0.03125)
+texture = ExtResource("1_s7j6r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
+shape = SubResource("SegmentShape2D_s7j6r")
+
+[node name="SingleColor2" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 646)
+scale = Vector2(9, 0.03125)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 20)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall2" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 60)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall3" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 100)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall4" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 140)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall5" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 180)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall6" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 220)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall7" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 260)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall8" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 300)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall9" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 340)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall10" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 380)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall11" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 420)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall12" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 460)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall13" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 500)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall14" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 540)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall15" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 580)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColorSmall16" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(576, 620)
+scale = Vector2(0.05, 0.1)
+texture = ExtResource("1_s7j6r")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Border"]
+shape = SubResource("SegmentShape2D_kbmwp")
+
+[node name="Pong_Player_1" parent="." instance=ExtResource("2_pnoxi")]
+position = Vector2(64, 324)
+
+[node name="Pong_Player_2" parent="." instance=ExtResource("2_pnoxi")]
+position = Vector2(1088, 324)
+id = 1
+
+[node name="Pong_Ball" parent="." instance=ExtResource("3_1xeuo")]
+position = Vector2(576, 324)
+
+[node name="Player_1_score" type="Label" parent="."]
+offset_left = 448.0
+offset_top = 32.0
+offset_right = 512.0
+offset_bottom = 92.0
+theme = ExtResource("5_0lln7")
+text = "10"
+horizontal_alignment = 2
+
+[node name="-" type="Label" parent="."]
+offset_left = 544.0
+offset_top = 32.0
+offset_right = 608.0
+offset_bottom = 92.0
+theme = ExtResource("5_0lln7")
+text = "-"
+horizontal_alignment = 1
+
+[node name="Player_2_score" type="Label" parent="."]
+offset_left = 640.0
+offset_top = 32.0
+offset_right = 704.0
+offset_bottom = 92.0
+theme = ExtResource("5_0lln7")
+text = "10"

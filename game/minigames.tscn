@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwe7jh510dvyk"]
+
+[ext_resource type="Script" uid="uid://da2tl2tmf2px5" path="res://game/minigames.gd" id="1_8bkdo"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/pixel_text.tres" id="2_k4qng"]
+[ext_resource type="PackedScene" uid="uid://bos8jfsys2uv7" path="res://game/pause_menu.tscn" id="3_qo22h"]
+
+[node name="Minigames" type="Node2D"]
+script = ExtResource("1_8bkdo")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 2
+offset_left = 276.0
+offset_top = 254.0
+offset_right = 876.0
+offset_bottom = 394.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="PONG" type="Button" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_k4qng")
+text = "pong"
+
+[node name="BREAKOUT" type="Button" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_k4qng")
+text = "BREAKOUT"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="PLATFORMER" type="Button" parent="Control/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_k4qng")
+text = "PLATFORMER"
+
+[node name="SHOOTER" type="Button" parent="Control/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_k4qng")
+text = "shootER"
+
+[node name="Pause_menu" parent="." instance=ExtResource("3_qo22h")]
+visible = false
+
+[node name="Games" type="Node2D" parent="."]
+
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/PONG" to="." method="_on_pong_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/BREAKOUT" to="." method="_on_breakout_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer2/PLATFORMER" to="." method="_on_platformer_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer2/SHOOTER" to="." method="_on_shooter_pressed"]
