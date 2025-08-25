@@ -25,6 +25,6 @@ func exit():
 func _input(event):
 	if event.is_action_pressed("ESC"):
 		pause_menu.process_mode = Node.PROCESS_MODE_ALWAYS
-		pause_menu.visible = true
-		get_tree().paused = true
+		pause_menu.visible = !pause_menu.visible
+		get_tree().paused = !get_tree().paused
 		

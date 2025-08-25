@@ -41,6 +41,18 @@ position = Vector2(576, 646)
 scale = Vector2(9, 0.03125)
 texture = ExtResource("1_s7j6r")
 
+[node name="SingleColor3" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(2, 324)
+scale = Vector2(0.03125, 5.0625)
+texture = ExtResource("1_s7j6r")
+
+[node name="SingleColor4" type="Sprite2D" parent="Border"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(1150, 324)
+scale = Vector2(0.0312501, 5.0625)
+texture = ExtResource("1_s7j6r")
+
 [node name="SingleColorSmall" type="Sprite2D" parent="Border"]
 modulate = Color(0.270588, 0.270588, 0.270588, 1)
 position = Vector2(576, 20)
@@ -175,3 +187,71 @@ offset_right = 704.0
 offset_bottom = 92.0
 theme = ExtResource("5_0lln7")
 text = "10"
+
+[node name="Label1" type="Label" parent="."]
+visible = false
+offset_left = 160.0
+offset_top = 262.0
+offset_right = 460.0
+offset_bottom = 386.0
+theme = ExtResource("5_0lln7")
+text = "player one
+Wins!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = 692.0
+offset_top = 262.0
+offset_right = 992.0
+offset_bottom = 386.0
+theme = ExtResource("5_0lln7")
+text = "player two
+Wins!"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 85.0
+offset_top = 456.0
+offset_right = 385.0
+offset_bottom = 516.0
+theme = ExtResource("5_0lln7")
+text = "p1: W + S"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 767.0
+offset_top = 456.0
+offset_right = 1067.0
+offset_bottom = 516.0
+theme = ExtResource("5_0lln7")
+text = "p2: arrows"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 448.0
+offset_top = 400.0
+offset_right = 704.0
+offset_bottom = 612.0
+
+[node name="play1p" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("5_0lln7")
+text = "play 1p"
+
+[node name="play2p" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("5_0lln7")
+text = "play 2p"
+
+[node name="home" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("5_0lln7")
+text = " home "
+
+[connection signal="pressed" from="VBoxContainer/play1p" to="." method="_on_play_1p_pressed"]
+[connection signal="pressed" from="VBoxContainer/play2p" to="." method="_on_play_2p_pressed"]
+[connection signal="pressed" from="VBoxContainer/home" to="." method="_on_home_pressed"]

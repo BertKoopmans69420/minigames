@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_oerl1"]
 
 [node name="Pause_menu" type="Node2D"]
-z_index = 1
+z_index = 2
 script = ExtResource("1_0hlgw")
 
 [node name="Control" type="Control" parent="."]

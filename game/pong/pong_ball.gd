@@ -1,6 +1,6 @@
 class_name PongBall extends CharacterBody2D
 
-var speed:float = 150
+var speed:float = 160
 var direction:Vector2 = Vector2(0, 0)
 var move = true
 func _ready():
@@ -10,6 +10,7 @@ func start(side):
 	await get_tree().create_timer(1.0).timeout
 	direction.x = side
 	direction.y = randf_range(-1.0, 1.0)
+
 
 
 func _process(delta):
@@ -30,7 +31,7 @@ func _process(delta):
 				direction.y = sin(angle * (4.0/5.0))
 			else:
 				direction.y = sin(angle * (3.0/5.0))
-			speed += 5
+			speed += 10
 		else: 
 			direction.y = -direction.y
 	move_and_slide()
@@ -40,4 +41,4 @@ func score(side:int):
 	start(side)
 	position = Vector2(576, 324)
 	direction = Vector2(0, 0)
-	speed = 150
+	speed = 160
