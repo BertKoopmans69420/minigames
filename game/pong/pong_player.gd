@@ -24,23 +24,24 @@ func _process(delta):
 		if id == 0:
 			if position.x != 56:
 				position.x = 56
-			direction = Input.get_axis("Pong up 1", "Pong down 1")
+			
 		else:
 			rotation_degrees = 180
 			if position.x != 1152-56:
 				position.x = 1152-56
+			direction = Input.get_axis("Pong up 2", "Pong down 2")
 	if !cpu:
 		if direction:
 			velocity.y = direction * speed
 		else:
 			velocity.y = move_toward(velocity.y, 0, speed)
 	else:
-		if id == 0:
+		if id == 1:
 			if direction:
 				velocity.y = direction * speed
 			else:
 				velocity.y = move_toward(velocity.y, 0, speed)
-		if id == 1:
+		if id == 0:
 			if pong.ball.position.y > position.y + 16:
 				velocity.y = speed
 			elif pong.ball.position.y < position.y - 16:

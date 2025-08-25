@@ -17,9 +17,15 @@ func add_score(side:int):
 		ball.move = false
 		end()
 		if int($Player_1_score.text) == 10:
-			$Label1.visible = true
+			if !$Pong_Player_1.cpu:
+				$Label1.visible = true
+			else:
+				$Label5.visible = true
 		if int($Player_2_score.text) == 10:
-			$Label2.visible = true
+			if !$Pong_Player_1.cpu:
+				$Label2.visible = true
+			else:
+				$Label6.visible = true
 
 
 func end():
@@ -37,6 +43,10 @@ func play():
 	$Label2.visible = false
 	$Label3.visible = false
 	$Label4.visible = false
+	$Label5.visible = false
+	$Label6.visible = false
+	$Label7.visible = false
+	$Label8.visible = false
 	$VBoxContainer.visible = false
 	ball.move = true
 	ball.start(1)
@@ -50,11 +60,11 @@ func _on_home_pressed():
 
 func _on_play_1p_pressed():
 	$VBoxContainer.visible = false
-	$Pong_Player_2.cpu = true
+	$Pong_Player_1.cpu = true
 	play()
 
 
 func _on_play_2p_pressed():
 	$VBoxContainer.visible = false
-	$Pong_Player_2.cpu = false
+	$Pong_Player_1.cpu = false
 	play()
