@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx6fvb5phw4ij"]
+
+[ext_resource type="Script" uid="uid://mvqag1erb4xp" path="res://game/breakout/breakout_player.gd" id="1_87aww"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_f51he"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f51he"]
+size = Vector2(128, 16)
+
+[node name="Breakout_Player" type="CharacterBody2D"]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_87aww")
+
+[node name="SingleColor" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+scale = Vector2(1, 0.125)
+texture = ExtResource("2_f51he")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_f51he")

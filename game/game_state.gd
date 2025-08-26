@@ -3,12 +3,14 @@ extends Node
 signal pong_add_score(side) #left -1, right 1 
 
 var scenes:Dictionary = {	"pong": load("res://game/pong/pong.tscn"),
-							"breakout": load("res://icon.svg"),
+							"breakout": load("res://game/breakout/breakout.tscn"),
 							"platformer": load("res://icon.svg"),
 							"shooter": load("res://icon.svg")
 						}
 var MINIGAMES:MiniGames
 var pause_menu:PauseMenu
+var pong:Pong
+var breakout:Breakout
 
 func enter(scene:String):
 	var loaded:PackedScene = scenes.get(scene)

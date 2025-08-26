@@ -2,6 +2,7 @@ class_name Pong extends Node2D
 
 @onready var ball = $Pong_Ball
 func _ready():
+	GameState.pong = self
 	ball.move = false
 	$Player_1_score.text = "0"
 	$Player_2_score.text = "0"

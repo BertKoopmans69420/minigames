@@ -11,7 +11,7 @@ func _on_pong_pressed():
 
 
 func _on_breakout_pressed():
-	pass # Replace with function body.
+	GameState.enter("breakout")
 
 
 func _on_platformer_pressed():

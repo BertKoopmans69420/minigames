@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckdcoucbylt1j"]
+
+[ext_resource type="Script" uid="uid://dwhl1hq6a41i" path="res://game/breakout/breakout_ball.gd" id="1_aw56y"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_2oeq7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yc0g5"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2oeq7"]
+radius = 12.0
+
+[node name="Breakout_Ball" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_aw56y")
+
+[node name="SingleColor" type="Sprite2D" parent="."]
+scale = Vector2(0.125, 0.063)
+texture = ExtResource("2_2oeq7")
+
+[node name="SingleColor2" type="Sprite2D" parent="."]
+scale = Vector2(0.063, 0.125)
+texture = ExtResource("2_2oeq7")
+
+[node name="SingleColor3" type="Sprite2D" parent="."]
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("2_2oeq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yc0g5")
+
+[node name="Laser" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laser"]
+shape = SubResource("CircleShape2D_2oeq7")
+
+[connection signal="body_entered" from="Laser" to="." method="_on_laser_body_entered"]

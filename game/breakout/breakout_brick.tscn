@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b52j0mghj5d1s"]
+
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="1_mecp4"]
+[ext_resource type="Script" uid="uid://boto5qjd1c6qf" path="res://game/breakout/breakout_brick.gd" id="1_pckiw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pckiw"]
+size = Vector2(62, 30)
+
+[node name="Breakout_Brick" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_pckiw")
+
+[node name="SingleColor" type="Sprite2D" parent="."]
+scale = Vector2(0.475, 0.175)
+texture = ExtResource("1_mecp4")
+
+[node name="SingleColor2" type="Sprite2D" parent="."]
+scale = Vector2(0.425, 0.225)
+texture = ExtResource("1_mecp4")
+
+[node name="SingleColor3" type="Sprite2D" parent="."]
+scale = Vector2(0.455, 0.205)
+texture = ExtResource("1_mecp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pckiw")

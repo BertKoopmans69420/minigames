@@ -3,10 +3,7 @@ class_name PongPlayer extends CharacterBody2D
 @export var id:int = 0
 var speed = 300.0
 var cpu = true
-var pong
 
-func _ready():
-	pong = get_parent()
 func _process(delta):
 	velocity.x = 0
 	var direction
@@ -42,9 +39,9 @@ func _process(delta):
 			else:
 				velocity.y = move_toward(velocity.y, 0, speed)
 		if id == 0:
-			if pong.ball.position.y > position.y + 16:
+			if GameState.pong.ball.position.y > position.y + 16:
 				velocity.y = speed
-			elif pong.ball.position.y < position.y - 16:
+			elif GameState.pong.ball.position.y < position.y - 16:
 				velocity.y = -speed
 			else:
 				velocity.y = move_toward(velocity.y, 0, speed)
