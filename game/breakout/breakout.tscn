@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bj47s268co2y0"]
+[gd_scene load_steps=10 format=3 uid="uid://bj47s268co2y0"]
 
 [ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="1_nolig"]
 [ext_resource type="Script" uid="uid://v7h6ge0slrua" path="res://game/breakout/breakout.gd" id="1_otqee"]
 [ext_resource type="PackedScene" uid="uid://cx6fvb5phw4ij" path="res://game/breakout/breakout_player.tscn" id="2_ihslo"]
 [ext_resource type="PackedScene" uid="uid://ckdcoucbylt1j" path="res://game/breakout/breakout_ball.tscn" id="3_53gxe"]
-[ext_resource type="PackedScene" uid="uid://b52j0mghj5d1s" path="res://game/breakout/breakout_brick.tscn" id="4_53gxe"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/pixel_text.tres" id="6_vhv6l"]
+[ext_resource type="PackedScene" uid="uid://q3856n0s1ecl" path="res://breakout_levels.tscn" id="7_g0xco"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nolig"]
 a = Vector2(1152, 2)
@@ -75,465 +76,40 @@ position = Vector2(576, 567)
 
 [node name="Bricks" type="Node2D" parent="."]
 
-[node name="Breakout_Brick" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(64, 64)
-
-[node name="Breakout_Brick2" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(128, 64)
-
-[node name="Breakout_Brick3" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(192, 64)
-
-[node name="Breakout_Brick4" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(256, 64)
-
-[node name="Breakout_Brick5" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(320, 64)
-
-[node name="Breakout_Brick6" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(384, 64)
-
-[node name="Breakout_Brick7" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(448, 64)
-
-[node name="Breakout_Brick8" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(512, 64)
-
-[node name="Breakout_Brick9" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(576, 64)
-
-[node name="Breakout_Brick10" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(640, 64)
-
-[node name="Breakout_Brick11" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(704, 64)
-
-[node name="Breakout_Brick12" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(768, 64)
-
-[node name="Breakout_Brick13" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(832, 64)
-
-[node name="Breakout_Brick14" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(896, 64)
-
-[node name="Breakout_Brick15" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(960, 64)
-
-[node name="Breakout_Brick16" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1024, 64)
-
-[node name="Breakout_Brick17" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1088, 64)
-
-[node name="Breakout_Brick18" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(64, 96)
-
-[node name="Breakout_Brick19" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(128, 96)
-
-[node name="Breakout_Brick20" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(192, 96)
-
-[node name="Breakout_Brick21" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(256, 96)
-
-[node name="Breakout_Brick22" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(320, 96)
-
-[node name="Breakout_Brick23" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(384, 96)
-
-[node name="Breakout_Brick24" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(448, 96)
-
-[node name="Breakout_Brick25" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(512, 96)
-
-[node name="Breakout_Brick26" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(576, 96)
-
-[node name="Breakout_Brick27" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(640, 96)
-
-[node name="Breakout_Brick28" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(704, 96)
-
-[node name="Breakout_Brick29" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(768, 96)
-
-[node name="Breakout_Brick30" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(832, 96)
-
-[node name="Breakout_Brick31" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(896, 96)
-
-[node name="Breakout_Brick32" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(960, 96)
-
-[node name="Breakout_Brick33" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1024, 96)
-
-[node name="Breakout_Brick34" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1088, 96)
-
-[node name="Breakout_Brick35" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(64, 128)
-
-[node name="Breakout_Brick36" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(128, 128)
-
-[node name="Breakout_Brick37" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(192, 128)
-
-[node name="Breakout_Brick38" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(256, 128)
-
-[node name="Breakout_Brick39" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(320, 128)
-
-[node name="Breakout_Brick40" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(384, 128)
-
-[node name="Breakout_Brick41" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(448, 128)
-
-[node name="Breakout_Brick42" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(512, 128)
-
-[node name="Breakout_Brick43" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(576, 128)
-
-[node name="Breakout_Brick44" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(640, 128)
-
-[node name="Breakout_Brick45" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(704, 128)
-
-[node name="Breakout_Brick46" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(768, 128)
-
-[node name="Breakout_Brick47" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(832, 128)
-
-[node name="Breakout_Brick48" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(896, 128)
-
-[node name="Breakout_Brick49" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(960, 128)
-
-[node name="Breakout_Brick50" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1024, 128)
-
-[node name="Breakout_Brick51" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1088, 128)
-
-[node name="Breakout_Brick52" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(64, 160)
-
-[node name="Breakout_Brick53" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(128, 160)
-
-[node name="Breakout_Brick54" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(192, 160)
-
-[node name="Breakout_Brick55" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(256, 160)
-
-[node name="Breakout_Brick56" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(320, 160)
-
-[node name="Breakout_Brick57" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(384, 160)
-
-[node name="Breakout_Brick58" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(448, 160)
-
-[node name="Breakout_Brick59" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(512, 160)
-
-[node name="Breakout_Brick60" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(576, 160)
-
-[node name="Breakout_Brick61" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(640, 160)
-
-[node name="Breakout_Brick62" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(704, 160)
-
-[node name="Breakout_Brick63" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(768, 160)
-
-[node name="Breakout_Brick64" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(832, 160)
-
-[node name="Breakout_Brick65" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(896, 160)
-
-[node name="Breakout_Brick66" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(960, 160)
-
-[node name="Breakout_Brick67" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1024, 160)
-
-[node name="Breakout_Brick68" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1088, 160)
-
-[node name="Breakout_Brick69" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(64, 192)
-
-[node name="Breakout_Brick70" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(128, 192)
-
-[node name="Breakout_Brick71" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(192, 192)
-
-[node name="Breakout_Brick72" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(256, 192)
-
-[node name="Breakout_Brick73" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(320, 192)
-
-[node name="Breakout_Brick74" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(384, 192)
-
-[node name="Breakout_Brick75" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(448, 192)
-
-[node name="Breakout_Brick76" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(512, 192)
-
-[node name="Breakout_Brick77" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(576, 192)
-
-[node name="Breakout_Brick78" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(640, 192)
-
-[node name="Breakout_Brick79" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(704, 192)
-
-[node name="Breakout_Brick80" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(768, 192)
-
-[node name="Breakout_Brick81" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(832, 192)
-
-[node name="Breakout_Brick82" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(896, 192)
-
-[node name="Breakout_Brick83" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(960, 192)
-
-[node name="Breakout_Brick84" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1024, 192)
-
-[node name="Breakout_Brick85" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1088, 192)
-
-[node name="Breakout_Brick86" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(64, 224)
-
-[node name="Breakout_Brick87" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(128, 224)
-
-[node name="Breakout_Brick88" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(192, 224)
-
-[node name="Breakout_Brick89" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(256, 224)
-
-[node name="Breakout_Brick90" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(320, 224)
-
-[node name="Breakout_Brick91" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(384, 224)
-
-[node name="Breakout_Brick92" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(448, 224)
-
-[node name="Breakout_Brick93" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(512, 224)
-
-[node name="Breakout_Brick94" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(576, 224)
-
-[node name="Breakout_Brick95" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(640, 224)
-
-[node name="Breakout_Brick96" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(704, 224)
-
-[node name="Breakout_Brick97" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(768, 224)
-
-[node name="Breakout_Brick98" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(832, 224)
-
-[node name="Breakout_Brick99" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(896, 224)
-
-[node name="Breakout_Brick100" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(960, 224)
-
-[node name="Breakout_Brick101" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1024, 224)
-
-[node name="Breakout_Brick102" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1088, 224)
-
-[node name="Breakout_Brick103" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(64, 256)
-
-[node name="Breakout_Brick104" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(128, 256)
-
-[node name="Breakout_Brick105" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(192, 256)
-
-[node name="Breakout_Brick106" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(256, 256)
-
-[node name="Breakout_Brick107" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(320, 256)
-
-[node name="Breakout_Brick108" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(384, 256)
-
-[node name="Breakout_Brick109" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(448, 256)
-
-[node name="Breakout_Brick110" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(512, 256)
-
-[node name="Breakout_Brick111" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(576, 256)
-
-[node name="Breakout_Brick112" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(640, 256)
-
-[node name="Breakout_Brick113" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(704, 256)
-
-[node name="Breakout_Brick114" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(768, 256)
-
-[node name="Breakout_Brick115" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(832, 256)
-
-[node name="Breakout_Brick116" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(896, 256)
-
-[node name="Breakout_Brick117" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(960, 256)
-
-[node name="Breakout_Brick118" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1024, 256)
-
-[node name="Breakout_Brick119" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1088, 256)
-
-[node name="Breakout_Brick120" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(64, 288)
-
-[node name="Breakout_Brick121" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(128, 288)
-
-[node name="Breakout_Brick122" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(192, 288)
-
-[node name="Breakout_Brick123" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(256, 288)
-
-[node name="Breakout_Brick124" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(320, 288)
-
-[node name="Breakout_Brick125" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(384, 288)
-
-[node name="Breakout_Brick126" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(448, 288)
-
-[node name="Breakout_Brick127" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(512, 288)
-
-[node name="Breakout_Brick128" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(576, 288)
-
-[node name="Breakout_Brick129" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(640, 288)
-
-[node name="Breakout_Brick130" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(704, 288)
-
-[node name="Breakout_Brick131" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(768, 288)
-
-[node name="Breakout_Brick132" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(832, 288)
-
-[node name="Breakout_Brick133" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(896, 288)
-
-[node name="Breakout_Brick134" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(960, 288)
-
-[node name="Breakout_Brick135" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1024, 288)
-
-[node name="Breakout_Brick136" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1088, 288)
-
-[node name="Breakout_Brick137" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(64, 320)
-
-[node name="Breakout_Brick138" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(128, 320)
-
-[node name="Breakout_Brick139" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(192, 320)
-
-[node name="Breakout_Brick140" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(256, 320)
-
-[node name="Breakout_Brick141" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(320, 320)
-
-[node name="Breakout_Brick142" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(384, 320)
-
-[node name="Breakout_Brick143" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(448, 320)
-
-[node name="Breakout_Brick144" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(512, 320)
-
-[node name="Breakout_Brick145" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(576, 320)
-
-[node name="Breakout_Brick146" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(640, 320)
-
-[node name="Breakout_Brick147" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(704, 320)
-
-[node name="Breakout_Brick148" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(768, 320)
-
-[node name="Breakout_Brick149" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(832, 320)
-
-[node name="Breakout_Brick150" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(896, 320)
-
-[node name="Breakout_Brick151" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(960, 320)
-
-[node name="Breakout_Brick152" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1024, 320)
-
-[node name="Breakout_Brick153" parent="Bricks" instance=ExtResource("4_53gxe")]
-position = Vector2(1088, 320)
-
 [node name="Powerups" type="Node2D" parent="."]
 
 [node name="Floors" type="Node2D" parent="."]
+
+[node name="Lives" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 4.0
+offset_right = 240.0
+offset_bottom = 64.0
+theme = ExtResource("6_vhv6l")
+text = "X 3"
+
+[node name="Points" type="Label" parent="."]
+offset_left = 968.0
+offset_top = 4.0
+offset_right = 1144.0
+offset_bottom = 64.0
+theme = ExtResource("6_vhv6l")
+text = "0P"
+horizontal_alignment = 2
+
+[node name="SingleColor" type="Sprite2D" parent="."]
+position = Vector2(32, 36)
+scale = Vector2(0.125, 0.25)
+texture = ExtResource("1_nolig")
+
+[node name="SingleColor2" type="Sprite2D" parent="."]
+position = Vector2(32, 36)
+scale = Vector2(0.25, 0.125)
+texture = ExtResource("1_nolig")
+
+[node name="SingleColor3" type="Sprite2D" parent="."]
+position = Vector2(32, 36)
+scale = Vector2(0.1875, 0.1875)
+texture = ExtResource("1_nolig")
+
+[node name="Breakout_Levels" parent="." instance=ExtResource("7_g0xco")]

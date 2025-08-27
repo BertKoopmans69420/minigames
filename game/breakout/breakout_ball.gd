@@ -1,15 +1,19 @@
 class_name BreakoutBall extends CharacterBody2D
-var speed:float = 160
+const minimum_speed = 150
+var min_speed = 150
+var speed:float = 150
 var direction:Vector2 = Vector2(0, 0)
 var move = true
 var laser = false
 var timer = 0.0
+var direct = false
 
 func _ready():
 	start()
 func start():
-	
-	await get_tree().create_timer(1.0).timeout
+	if !direct:
+		await get_tree().create_timer(1.0).timeout
+	speed = min_speed
 	move = true
 	position = Vector2(GameState.breakout.player.position.x, GameState.breakout.player.position.y - 52)
 	if direction == Vector2(0, 0):
@@ -17,6 +21,8 @@ func start():
 		direction.x = .5
 
 func _process(delta):
+	if speed < min_speed + 5 * GameState.breakout.level:
+		speed = min_speed + 5 * GameState.breakout.level
 	if timer > 0.0:
 		timer -= delta
 	if timer <= 0.0:
@@ -40,7 +46,6 @@ func _process(delta):
 			direction.x = -cos(angle)
 			speed += 1
 		elif collider is BreakoutSafeFloor:
-			print("hit")
 			collider.hit()
 			direction.y = -direction.y
 		else: 
@@ -53,10 +58,12 @@ func _process(delta):
 			else:
 				direction.x = -direction.x
 				direction.y = -direction.y
+				if direction.y == 0:
+					direction.y = -0.001
 	move_and_slide()
 
 
 func _on_laser_body_entered(body):
 	if body is BreakoutBrick:
 		if laser == true:
-			body.destroy()
+			body.laser_destroy()
