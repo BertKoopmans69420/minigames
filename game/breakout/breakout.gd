@@ -3,8 +3,8 @@ class_name Breakout extends Node2D
 @onready var powerups = $Powerups
 @onready var balls = $Balls
 @onready var player = $Breakout_Player
+@onready var bricks = $Bricks
 var level = 0
-var highscore = 66099 #Fake (Sarah)
 
 var ballscene = load("res://game/breakout/breakout_ball.tscn")
 var floorscene = load("res://game/breakout/breakout_safe_floor.tscn")
@@ -20,21 +20,30 @@ var points:int:
 		$Points.text = str(value, "P")
 
 func _ready():
+	new_ball()
+	player.move = true
+	level = 0
 	lives = 3
 	points = 0
 	GameState.breakout = self
 	set_level()
 func _process(delta):
-	if balls.get_children() == []:
-		lives -= 1
-		new_ball()
+	
 		
 	if $Bricks.get_children() == []:
 		level += 1
 		set_level()
 		
 	if lives == 0:
-		end()
+		if player.move == true:
+			player.move = false
+			show_high_scores()
+	else:
+		if balls.get_children() == []:
+			lives -= 1
+			if lives != 0:
+				new_ball()
+		
 
 func powerup(power:String):
 	match power:
@@ -87,7 +96,11 @@ func set_level():
 
 		
 		$Bricks.add_child(brick)
-		
+
+func show_high_scores():
+	$Breakout_High_Scores.visible = true
+	$Breakout_High_Scores/Name.visible = true
+	$Breakout_High_Scores/Name.grab_focus()
 
 func end():
 	await get_tree().create_timer(2.0).timeout

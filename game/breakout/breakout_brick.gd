@@ -6,8 +6,6 @@ func _ready():
 	change_color()
 
 func destroy():
-	if randi_range(1, 5) == 1:
-		drop_powerup()
 	GameState.breakout.points += strength
 	strength -= 1
 	
@@ -23,12 +21,11 @@ func destroy():
 		change_color()
 
 func laser_destroy():
-
 	if randi_range(1, 8) == 1:
 		drop_powerup()
 	var total = 0
 	for i in strength:
-		total += i
+		total += i + 1
 	GameState.breakout.points += total
 	die()
 	

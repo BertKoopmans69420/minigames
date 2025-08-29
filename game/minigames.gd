@@ -20,3 +20,15 @@ func _on_platformer_pressed():
 
 func _on_shooter_pressed():
 	pass # Replace with function body.
+
+
+func _on_quit_pressed():
+	get_tree().quit()
+
+func _input(event):
+	if event.is_action_pressed("F11"):
+		var window = get_window()
+		if window.mode != Window.MODE_EXCLUSIVE_FULLSCREEN:
+			window.mode = Window.MODE_EXCLUSIVE_FULLSCREEN
+		else:
+			window.mode = Window.MODE_WINDOWED

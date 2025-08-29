@@ -49,6 +49,16 @@ layout_mode = 2
 theme = ExtResource("2_k4qng")
 text = " shootER "
 
+[node name="QUIT" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 480.0
+offset_right = 676.0
+offset_bottom = 590.0
+theme = ExtResource("2_k4qng")
+theme_override_font_sizes/font_size = 101
+text = "Quit"
+
 [node name="Pause_menu" parent="." instance=ExtResource("3_qo22h")]
 visible = false
 
@@ -58,3 +68,4 @@ visible = false
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/BREAKOUT" to="." method="_on_breakout_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer2/PLATFORMER" to="." method="_on_platformer_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer2/SHOOTER" to="." method="_on_shooter_pressed"]
+[connection signal="pressed" from="Control/QUIT" to="." method="_on_quit_pressed"]

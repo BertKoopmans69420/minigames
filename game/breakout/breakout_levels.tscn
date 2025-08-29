@@ -395,7 +395,7 @@ position = Vector2(640, 320)
 position = Vector2(704, 320)
 
 [node name="Marker2D131" type="Marker2D" parent="0"]
-position = Vector2(768, 318)
+position = Vector2(768, 320)
 
 [node name="Marker2D132" type="Marker2D" parent="0"]
 position = Vector2(832, 320)
@@ -1377,7 +1377,7 @@ position = Vector2(1024, 352)
 position = Vector2(1120, 320)
 
 [node name="Marker2D182" type="Marker2D" parent="2"]
-position = Vector2(1089, 352)
+position = Vector2(1088, 352)
 
 [node name="Marker2D183" type="Marker2D" parent="2"]
 position = Vector2(576, 416)

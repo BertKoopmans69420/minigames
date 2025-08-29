@@ -30,7 +30,7 @@ func _process(delta):
 		modulate = Color(1, 1, 1, 1)
 		set_collision_layer_value(2, true)
 		set_collision_mask_value(1, true)
-	if position.y > get_window().size.y:
+	if position.y > 648:
 		queue_free()
 
 
@@ -59,7 +59,7 @@ func _process(delta):
 				direction.x = -direction.x
 				direction.y = -direction.y
 				if direction.y == 0:
-					direction.y = -0.001
+					direction.y = 0.01
 	move_and_slide()
 
 

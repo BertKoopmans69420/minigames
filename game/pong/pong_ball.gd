@@ -12,7 +12,7 @@ func start(side):
 	direction.y = randf_range(-1.0, 1.0)
 
 func _process(delta):
-	if position.x > get_window().size.x:
+	if position.x > 1152:
 		score(1)
 	if position.x < 0:
 		score(-1)
