@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_oerl1"]
 
 [node name="Pause_menu" type="Node2D"]
+top_level = true
 z_index = 2
 script = ExtResource("1_0hlgw")
 
@@ -25,6 +26,7 @@ offset_bottom = 452.0
 layout_mode = 2
 size_flags_vertical = 2
 theme = ExtResource("1_gskg7")
+theme_override_font_sizes/font_size = 72
 text = "paused"
 horizontal_alignment = 1
 

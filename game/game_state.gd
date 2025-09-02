@@ -4,24 +4,27 @@ signal pong_add_score(side) #left -1, right 1
 
 var scenes:Dictionary = {	"pong": load("res://game/pong/pong.tscn"),
 							"breakout": load("res://game/breakout/breakout.tscn"),
-							"platformer": load("res://icon.svg"),
-							"shooter": load("res://icon.svg")
+							"platformer": load("res://game/platformer/platformer.tscn"),
+							"shooter": load("res://game/shooter/shooter.tscn")
 						}
 var MINIGAMES:MiniGames
 var pause_menu:PauseMenu
 var pong:Pong
 var breakout:Breakout
+var platformer:Platformer
 
-var breakout_highscores:Array = [["neh", 1258743], ["dan", 1780], ["---", 0], ["---", 0], ["---", 0]]
-
-
-
+var breakout_highscores:Array #= [["neh", 1258743], ["dan", 1780], ["---", 0], ["---", 0], ["---", 0]]
+var platformer_saves:Dictionary = {"Nathan" : [1, 1, 3, 1, 1]}
+#platformer save= name: [last_world, last_level, lives, coins, current_page] (, powers?)
+var platformer_player:String = "Nathan"
+var platformer_save:Array = [1, 1, 3, 1, 1]
 const game_version = "0.2"
 const save_filename = "user://minigames.save"
 func _ready():
-	save()
+	#save()
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	load_save_file()
+	#save()
 	
 
 
@@ -40,6 +43,10 @@ func _input(event):
 	if event.is_action_pressed("ESC"):
 		pause_menu.process_mode = Node.PROCESS_MODE_ALWAYS
 		pause_menu.visible = !pause_menu.visible
+		if GameState.platformer and GameState.platformer.in_level == true:
+			pause_menu.exit.text = "menu"
+		else:
+			pause_menu.exit.text = "home"
 		get_tree().paused = !get_tree().paused
 
 func sort_highscores():
@@ -92,7 +99,7 @@ func load_from_file(filename:String):
 			return
 
 		GameState.breakout_highscores = save_data["breakout_highscores"]
-
+		#GameState.platformer_saves = save_data["platformer_saves"]
 		print_save_data(filename)
 
 func _load_json_line(file:FileAccess) -> Variant:
@@ -114,7 +121,7 @@ func save_to_file(filename:String):
 	var save_data = {
 		"game_version" : GameState.game_version,
 		"breakout_highscores" : GameState.breakout_highscores,
-
+		"platformer_saves": GameState.platformer_saves
 	}
 	
 	var data = JSON.stringify(save_data, "", true, true)

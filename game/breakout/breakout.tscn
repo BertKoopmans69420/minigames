@@ -83,6 +83,7 @@ offset_top = 4.0
 offset_right = 240.0
 offset_bottom = 64.0
 theme = ExtResource("6_vhv6l")
+theme_override_font_sizes/font_size = 55
 text = "X 3"
 
 [node name="Points" type="Label" parent="."]
@@ -91,6 +92,7 @@ offset_top = 4.0
 offset_right = 1144.0
 offset_bottom = 64.0
 theme = ExtResource("6_vhv6l")
+theme_override_font_sizes/font_size = 55
 text = "0P"
 horizontal_alignment = 2
 

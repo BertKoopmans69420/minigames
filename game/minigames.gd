@@ -15,11 +15,11 @@ func _on_breakout_pressed():
 
 
 func _on_platformer_pressed():
-	pass # Replace with function body.
+	GameState.enter("platformer")
 
 
 func _on_shooter_pressed():
-	pass # Replace with function body.
+	GameState.enter("shooter")
 
 
 func _on_quit_pressed():

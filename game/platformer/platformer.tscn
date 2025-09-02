@@ -1,0 +1,133 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnkrewwweqa81"]
+
+[ext_resource type="Script" uid="uid://bh2kn171nx2y5" path="res://game/platformer/platformer.gd" id="1_rhu1t"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/pixel_text.tres" id="2_v41no"]
+
+[node name="Platformer" type="Node2D"]
+script = ExtResource("1_rhu1t")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Name_Enter" type="VBoxContainer" parent="Control"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Name_Enter"]
+layout_mode = 2
+theme = ExtResource("2_v41no")
+
+[node name="Label" type="Label" parent="Control/Name_Enter/PanelContainer"]
+layout_mode = 2
+text = "enter your name:"
+
+[node name="Menu" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="World" type="HBoxContainer" parent="Control/Menu"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Prev_World" type="Button" parent="Control/Menu/World"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("2_v41no")
+theme_override_font_sizes/font_size = 100
+text = "<"
+
+[node name="Curr_World" type="Label" parent="Control/Menu/World"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("2_v41no")
+theme_override_font_sizes/font_size = 100
+text = "World 2"
+horizontal_alignment = 1
+
+[node name="Next_World" type="Button" parent="Control/Menu/World"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("2_v41no")
+theme_override_font_sizes/font_size = 100
+text = ">"
+
+[node name="Levels_1" type="HBoxContainer" parent="Control/Menu"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="1" type="Button" parent="Control/Menu/Levels_1"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("2_v41no")
+theme_override_font_sizes/font_size = 100
+text = "1"
+
+[node name="2" type="Button" parent="Control/Menu/Levels_1"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("2_v41no")
+theme_override_font_sizes/font_size = 100
+text = "2"
+
+[node name="3" type="Button" parent="Control/Menu/Levels_1"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("2_v41no")
+theme_override_font_sizes/font_size = 100
+text = "3
+"
+
+[node name="Levels_2" type="HBoxContainer" parent="Control/Menu"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="4" type="Button" parent="Control/Menu/Levels_2"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("2_v41no")
+theme_override_font_sizes/font_size = 100
+text = "4"
+
+[node name="5" type="Button" parent="Control/Menu/Levels_2"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("2_v41no")
+theme_override_font_sizes/font_size = 100
+text = "5"
+
+[node name="6" type="Button" parent="Control/Menu/Levels_2"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("2_v41no")
+theme_override_font_sizes/font_size = 100
+text = "6
+"
+
+[node name="Level" type="Node2D" parent="."]
+
+[connection signal="pressed" from="Control/Menu/World/Prev_World" to="." method="previous_world"]
+[connection signal="pressed" from="Control/Menu/World/Next_World" to="." method="next_world"]
+[connection signal="pressed" from="Control/Menu/Levels_1/1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Control/Menu/Levels_1/2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Control/Menu/Levels_1/3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Control/Menu/Levels_2/4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="Control/Menu/Levels_2/5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Control/Menu/Levels_2/6" to="." method="_on_level_6_pressed"]

@@ -4,6 +4,8 @@
 - Breakout
 - A small platformer
 - A top-down shooter
+- 2048?
+- suika game?
 
 ##Pong:
 	- 1 player mode
@@ -11,5 +13,6 @@
 	- First with 10 points wins.
 
 ##Breakout:
-	- Multiple powerups ()
-	- 3 Lives (TODO)
+	- Multiple powerups
+	- 3 lives to start with
+	- Highscores

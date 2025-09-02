@@ -27,7 +27,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_k4qng")
-text = " pong "
+text = " pOng "
 
 [node name="BREAKOUT" type="Button" parent="Control/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -47,7 +47,7 @@ text = " PLATFORMER "
 [node name="SHOOTER" type="Button" parent="Control/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("2_k4qng")
-text = " shootER "
+text = " shOOter "
 
 [node name="QUIT" type="Button" parent="Control"]
 layout_mode = 0
@@ -59,10 +59,10 @@ theme = ExtResource("2_k4qng")
 theme_override_font_sizes/font_size = 101
 text = "Quit"
 
+[node name="Games" type="Node2D" parent="."]
+
 [node name="Pause_menu" parent="." instance=ExtResource("3_qo22h")]
 visible = false
-
-[node name="Games" type="Node2D" parent="."]
 
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/PONG" to="." method="_on_pong_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/BREAKOUT" to="." method="_on_breakout_pressed"]

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://da66cxf8l3rq8"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://da66cxf8l3rq8"]
 
 [ext_resource type="FontFile" uid="uid://m1021y6um42d" path="res://resources/Robot Crush.ttf" id="1_8qddp"]
 
@@ -50,12 +50,15 @@ bg_color = Color(1, 1, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6k4mb"]
 bg_color = Color(1, 1, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fgpx"]
+bg_color = Color(0, 0, 0, 1)
+
 [resource]
 default_font = ExtResource("1_8qddp")
-default_font_size = 55
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 50
 Button/styles/focus = SubResource("StyleBoxFlat_42qbe")
 Button/styles/hover = SubResource("StyleBoxFlat_2447a")
 Button/styles/hover_pressed = SubResource("StyleBoxFlat_m5low")
@@ -67,3 +70,4 @@ LineEdit/colors/font_placeholder_color = Color(0, 0, 0, 0.6)
 LineEdit/font_sizes/font_size = 50
 LineEdit/styles/focus = SubResource("StyleBoxFlat_w8a4m")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_6k4mb")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_7fgpx")
