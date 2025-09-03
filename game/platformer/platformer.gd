@@ -2,9 +2,9 @@ class_name Platformer extends Node2D
 var last_completed_world:int = 1
 var last_completed_level:int = 0
 var lives:int = 3
-var coins:int = 1
+var coins:int = 0
 var current_world:int = 1
-var final_world:int = 8 # final world
+var final_world:int = 1 # final world will be 8 i think
 var in_level = false
 var platformer_levels:Dictionary = {"World 1" : {	"Level 1" : load("res://game/platformer/levels/1-1.tscn"),} 
 													#"Level 2" : load("res://game/platformer/levels/1-2.tscn"), 

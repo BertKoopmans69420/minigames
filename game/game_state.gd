@@ -22,9 +22,12 @@ const game_version = "0.2"
 const save_filename = "user://minigames.save"
 func _ready():
 	#save()
+	
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	load_save_file()
-	#save()
+	sort_highscores()
+	#breakout_highscores.append(["neh", 21034794])
+	save()
 	
 
 
