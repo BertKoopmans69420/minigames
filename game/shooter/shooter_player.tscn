@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://jnt4xtty32e3"]
+
+[ext_resource type="Script" uid="uid://n8h3gcih2oss" path="res://game/shooter/shooter_player.gd" id="1_oydxy"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_crh8t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0obd"]
+size = Vector2(16, 16)
+
+[node name="Shooter_Player" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
+floor_stop_on_slope = false
+platform_floor_layers = 4294967041
+script = ExtResource("1_oydxy")
+
+[node name="body" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, 0)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("2_crh8t")
+
+[node name="eye" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(6, -4)
+scale = Vector2(0.016, 0.016)
+texture = ExtResource("2_crh8t")
+
+[node name="eye2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(6, 4)
+scale = Vector2(0.016, 0.016)
+texture = ExtResource("2_crh8t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_o0obd")

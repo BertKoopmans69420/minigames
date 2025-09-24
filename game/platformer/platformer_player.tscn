@@ -9,8 +9,8 @@ size = Vector2(16, 16)
 [node name="Platformer_Player" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 3
+floor_stop_on_slope = false
 platform_floor_layers = 4294967041
-platform_wall_layers = 2
 script = ExtResource("1_o0obd")
 
 [node name="SingleColor" type="Sprite2D" parent="."]

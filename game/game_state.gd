@@ -5,20 +5,22 @@ signal pong_add_score(side) #left -1, right 1
 var scenes:Dictionary = {	"pong": load("res://game/pong/pong.tscn"),
 							"breakout": load("res://game/breakout/breakout.tscn"),
 							"platformer": load("res://game/platformer/platformer.tscn"),
-							"shooter": load("res://game/shooter/shooter.tscn")
+							"shooter": load("res://game/shooter/shooter.tscn"),
 						}
 var MINIGAMES:MiniGames
 var pause_menu:PauseMenu
 var pong:Pong
 var breakout:Breakout
 var platformer:Platformer
+var shooter:Shooter
 
-var breakout_highscores:Array #= [["neh", 1258743], ["dan", 1780], ["---", 0], ["---", 0], ["---", 0]]
+var breakout_highscores:Array #= [["neh", 21034794], ["neh", 1258743], ["dan", 1780], ["---", 0], ["---", 0]]
+var shooter_highscores:Array #= [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
 var platformer_saves:Dictionary = {"Nathan" : [1, 1, 3, 1, 1]}
 #platformer save= name: [last_world, last_level, lives, coins, current_page] (, powers?)
 var platformer_player:String = "Nathan"
 var platformer_save:Array = [1, 1, 3, 1, 1]
-const game_version = "0.2"
+const game_version = "0.3"
 const save_filename = "user://minigames.save"
 func _ready():
 	#save()
@@ -26,7 +28,6 @@ func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	load_save_file()
 	sort_highscores()
-	#breakout_highscores.append(["neh", 21034794])
 	save()
 	
 
@@ -56,6 +57,9 @@ func sort_highscores():
 	breakout_highscores.sort_custom(highscore_sort)
 	while len(breakout_highscores) >= 6:
 		breakout_highscores.remove_at(5)
+	shooter_highscores.sort_custom(highscore_sort)
+	while len(shooter_highscores) >= 6:
+		shooter_highscores.remove_at(5)
 func highscore_sort(a, b):
 	if a[1] > b[1]:
 		return true
@@ -102,6 +106,7 @@ func load_from_file(filename:String):
 			return
 
 		GameState.breakout_highscores = save_data["breakout_highscores"]
+		GameState.shooter_highscores = save_data["shooter_highscores"]
 		#GameState.platformer_saves = save_data["platformer_saves"]
 		print_save_data(filename)
 
@@ -124,6 +129,7 @@ func save_to_file(filename:String):
 	var save_data = {
 		"game_version" : GameState.game_version,
 		"breakout_highscores" : GameState.breakout_highscores,
+		"shooter_highscores" : GameState.shooter_highscores,
 		"platformer_saves": GameState.platformer_saves
 	}
 	

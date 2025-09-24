@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://vcj23rd8oap5"]
+
+[ext_resource type="Script" uid="uid://b8e2ci8m8iake" path="res://game/shooter/shooter_bullet.gd" id="1_0fy6w"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_luott"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lam7v"]
+size = Vector2(3.5, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7p3l"]
+size = Vector2(8, 3)
+
+[node name="Shooter_Bullet" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_0fy6w")
+
+[node name="SingleColor" type="Sprite2D" parent="."]
+scale = Vector2(0.062, 0.023)
+texture = ExtResource("2_luott")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lam7v")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_h7p3l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

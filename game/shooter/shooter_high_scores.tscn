@@ -1,0 +1,230 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxsoqhfpx324a"]
+
+[ext_resource type="Script" uid="uid://cu8hcrdpxwj6x" path="res://game/shooter/shooter_high_scores.gd" id="1_fmurx"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/pixel_text.tres" id="2_3iumm"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="3_4tb4s"]
+
+[node name="Shooter_High_Scores" type="Control"]
+z_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fmurx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 320.0
+offset_top = 102.0
+offset_right = 833.0
+offset_bottom = 546.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="1" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_colors/font_color = Color(1, 0.784314, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "#1."
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_colors/font_color = Color(1, 0.784314, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "---"
+visible_characters = 3
+
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_colors/font_color = Color(1, 0.784314, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_colors/font_color = Color(0.696351, 0.696351, 0.696351, 1)
+theme_override_font_sizes/font_size = 55
+text = "#2. "
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_colors/font_color = Color(0.696351, 0.696351, 0.696351, 1)
+theme_override_font_sizes/font_size = 55
+text = "---"
+visible_characters = 3
+
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_colors/font_color = Color(0.696351, 0.696351, 0.696351, 1)
+theme_override_font_sizes/font_size = 55
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="3" type="Label" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_colors/font_color = Color(0.721569, 0.309804, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "#3."
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_colors/font_color = Color(0.721569, 0.309804, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "---"
+visible_characters = 3
+
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_colors/font_color = Color(0.721569, 0.309804, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="4" type="Label" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_font_sizes/font_size = 55
+text = "#4."
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_font_sizes/font_size = 55
+text = "---"
+visible_characters = 3
+
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_font_sizes/font_size = 55
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="5" type="Label" parent="VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_font_sizes/font_size = 55
+text = "#5."
+
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_font_sizes/font_size = 55
+text = "---"
+visible_characters = 3
+
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_3iumm")
+theme_override_font_sizes/font_size = 55
+text = "0"
+horizontal_alignment = 1
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_3iumm")
+text = " continue "
+
+[node name="exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_3iumm")
+text = " home "
+
+[node name="SingleColor" type="Sprite2D" parent="VBoxContainer"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+position = Vector2(256, 226)
+scale = Vector2(4.125, 3.5)
+texture = ExtResource("3_4tb4s")
+
+[node name="Name" type="LineEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 768.0
+offset_bottom = 320.0
+theme = ExtResource("2_3iumm")
+placeholder_text = "---"
+alignment = 1
+max_length = 3
+
+[node name="Label" type="Label" parent="Name"]
+layout_mode = 0
+offset_left = -192.0
+offset_bottom = 64.0
+theme = ExtResource("2_3iumm")
+theme_override_font_sizes/font_size = 56
+text = "Name:"
+horizontal_alignment = 1
+
+[node name="SingleColor" type="Sprite2D" parent="Name/Label"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+position = Vector2(192, 32)
+scale = Vector2(3.125, 0.625)
+texture = ExtResource("3_4tb4s")
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]
+[connection signal="text_changed" from="Name" to="." method="_on_name_changed"]
+[connection signal="text_submitted" from="Name" to="." method="_on_ok_pressed"]
