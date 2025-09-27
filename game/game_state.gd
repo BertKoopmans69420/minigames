@@ -101,9 +101,17 @@ func load_from_file(filename:String):
 			get_tree().quit(err)
 		
 		var save_data:Dictionary = _load_json_line(save_file)
+		if not save_data.has("breakout_highscores"):
+			GameState.breakout_highscores = [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
+		if not save_data.has("shooter_highscores"):
+			GameState.shooter_highscores = [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
 		if not save_data.has("game_version"):
 			print("Missing version info. Ignoring save data")
 			return
+		
+		
+		
+		
 
 		GameState.breakout_highscores = save_data["breakout_highscores"]
 		GameState.shooter_highscores = save_data["shooter_highscores"]
