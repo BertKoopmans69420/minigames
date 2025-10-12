@@ -1,5 +1,6 @@
 extends Node
 
+@warning_ignore("unused_signal")
 signal pong_add_score(side) #left -1, right 1 
 
 var scenes:Dictionary = {	"pong": load("res://game/pong/pong.tscn"),
@@ -13,7 +14,7 @@ var pong:Pong
 var breakout:Breakout
 var platformer:Platformer
 var shooter:Shooter
-
+var empty_highscores:Array = [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
 var breakout_highscores:Array #= [["neh", 21034794], ["neh", 1258743], ["dan", 1780], ["---", 0], ["---", 0]]
 var shooter_highscores:Array #= [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
 var platformer_saves:Dictionary = {"Nathan" : [1, 1, 3, 1, 1]}
@@ -60,10 +61,12 @@ func sort_highscores():
 	shooter_highscores.sort_custom(highscore_sort)
 	while len(shooter_highscores) >= 6:
 		shooter_highscores.remove_at(5)
+
 func highscore_sort(a, b):
 	if a[1] > b[1]:
 		return true
 	return false
+
 
 
 

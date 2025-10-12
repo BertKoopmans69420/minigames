@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://bj47s268co2y0"]
 
-[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="1_nolig"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="1_nolig"]
 [ext_resource type="Script" uid="uid://v7h6ge0slrua" path="res://game/breakout/breakout.gd" id="1_otqee"]
 [ext_resource type="PackedScene" uid="uid://cx6fvb5phw4ij" path="res://game/breakout/breakout_player.tscn" id="2_ihslo"]
-[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/pixel_text.tres" id="6_vhv6l"]
-[ext_resource type="PackedScene" uid="uid://cmxvxydsj31x0" path="res://game/breakout/breakout_high_scores.tscn" id="7_5obmw"]
+[ext_resource type="PackedScene" uid="uid://dl5cy7icdno42" path="res://game/high_scores.tscn" id="6_g0xco"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/tres/pixel_text.tres" id="6_vhv6l"]
 [ext_resource type="PackedScene" uid="uid://q3856n0s1ecl" path="res://game/breakout/breakout_levels.tscn" id="7_g0xco"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nolig"]
@@ -113,4 +113,4 @@ texture = ExtResource("1_nolig")
 
 [node name="Breakout_Levels" parent="." instance=ExtResource("7_g0xco")]
 
-[node name="Breakout_High_Scores" parent="." instance=ExtResource("7_5obmw")]
+[node name="High_Scores" parent="." instance=ExtResource("6_g0xco")]

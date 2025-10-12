@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://m1021y6um42d"
-path="res://.godot/imported/Robot Crush.ttf-0546be374d218c8615d14219fc959bcc.fontdata"
+path="res://.godot/imported/Robot Crush.ttf-753d615237a3ce1b48af3a838adf0a7d.fontdata"
 
 [deps]
 
-source_file="res://resources/Robot Crush.ttf"
-dest_files=["res://.godot/imported/Robot Crush.ttf-0546be374d218c8615d14219fc959bcc.fontdata"]
+source_file="res://resources/ttf/Robot Crush.ttf"
+dest_files=["res://.godot/imported/Robot Crush.ttf-753d615237a3ce1b48af3a838adf0a7d.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true

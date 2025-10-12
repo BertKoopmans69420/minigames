@@ -20,9 +20,9 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("Platformer left", "Platformer right")
 	if direction:
-		velocity.x = move_toward(velocity.x, direction * speed, speed / 2)
+		velocity.x = move_toward(velocity.x, direction * speed, speed / 2.0)
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed / 2)
+		velocity.x = move_toward(velocity.x, 0, speed / 2.0)
 
 	#death if below screen
 	if position.y > get_window().size.y:
@@ -30,9 +30,9 @@ func _physics_process(delta):
 
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info:
-		var collision_point = collision_info.get_position()
+		var _collision_point = collision_info.get_position()
 		#print(collision_point)
-		var collider = collision_info.get_collider()
+		var _collider = collision_info.get_collider()
 
 		#print(collider)
 

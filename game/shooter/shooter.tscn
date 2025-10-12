@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://e0t231rvwo4" path="res://game/shooter/shooter.gd" id="1_6em3b"]
 [ext_resource type="PackedScene" uid="uid://jnt4xtty32e3" path="res://game/shooter/shooter_player.tscn" id="1_oq2ro"]
-[ext_resource type="PackedScene" uid="uid://bxsoqhfpx324a" path="res://game/shooter/shooter_high_scores.tscn" id="2_ovid3"]
-[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_w7dqf"]
-[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/pixel_text.tres" id="3_s63ah"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="2_w7dqf"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/tres/pixel_text.tres" id="3_s63ah"]
+[ext_resource type="PackedScene" uid="uid://dl5cy7icdno42" path="res://game/high_scores.tscn" id="4_w7dqf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7dqf"]
 size = Vector2(1152, 2)
@@ -49,7 +49,7 @@ theme_override_font_sizes/font_size = 42
 text = "0"
 horizontal_alignment = 1
 
-[node name="Shooter_High_Scores" parent="." instance=ExtResource("2_ovid3")]
+[node name="High_Scores" parent="." instance=ExtResource("4_w7dqf")]
 
 [node name="Shooter_Player" parent="." instance=ExtResource("1_oq2ro")]
 position = Vector2(576, 324)

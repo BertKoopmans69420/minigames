@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://drb26ti78t0lm"]
 
-[ext_resource type="Texture2D" uid="uid://2mghm4xqclp6" path="res://resources/Pixelmap.png" id="1_o3iek"]
+[ext_resource type="Texture2D" uid="uid://2mghm4xqclp6" path="res://resources/png/Pixelmap.png" id="1_o3iek"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xs2y"]
 resource_name = "Textures"

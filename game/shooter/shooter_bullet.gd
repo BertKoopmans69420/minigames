@@ -8,7 +8,7 @@ var speed = 450
 func _ready():
 	look_at(global_position + direction)
 	velocity = direction * speed
-func _process(delta):
+func _process(_delta):
 	if position.x > 1168 or position.x < -16 or position.y > 644 or position.y < -16:
 		queue_free()
 	look_at(global_position + direction)

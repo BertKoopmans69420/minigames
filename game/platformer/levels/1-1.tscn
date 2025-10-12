@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://bxs1jsox72nes"]
 
-[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="1_3c42e"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="1_3c42e"]
 [ext_resource type="PackedScene" uid="uid://b82s6hy0rte3a" path="res://game/platformer/platformer_player.tscn" id="1_38qck"]
 [ext_resource type="PackedScene" uid="uid://dervasj7r841t" path="res://game/platformer/floor.tscn" id="3_xwig7"]
 

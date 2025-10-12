@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bx2lrhjskmehr"]
 
 [ext_resource type="Script" uid="uid://d18x3ucuvj4f" path="res://game/pong/pong.gd" id="1_0lln7"]
-[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="1_s7j6r"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="1_s7j6r"]
 [ext_resource type="PackedScene" uid="uid://dkskikjqnium3" path="res://game/pong/pong_player.tscn" id="2_pnoxi"]
 [ext_resource type="PackedScene" uid="uid://40wt8sb3qw2u" path="res://game/pong/pong_ball.tscn" id="3_1xeuo"]
-[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/pixel_text.tres" id="5_0lln7"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/tres/pixel_text.tres" id="5_0lln7"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_s7j6r"]
 a = Vector2(1152, 2)

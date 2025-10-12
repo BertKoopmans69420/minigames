@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmxvxydsj31x0"]
+[gd_scene load_steps=4 format=3 uid="uid://dl5cy7icdno42"]
 
-[ext_resource type="Script" uid="uid://bwexykeyu5klm" path="res://game/breakout/breakout_high_scores.gd" id="1_lkivx"]
-[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/tres/pixel_text.tres" id="2_m5rkx"]
-[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="3_ffmll"]
+[ext_resource type="Script" uid="uid://4mmdunfo1jnk" path="res://game/high_scores.gd" id="1_g42mx"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/tres/pixel_text.tres" id="2_p4dlj"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="3_qljoc"]
 
-[node name="Breakout_High_Scores" type="Control"]
+[node name="High_Scores" type="Control"]
 z_index = 2
 layout_mode = 3
 anchors_preset = 15
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_lkivx")
+script = ExtResource("1_g42mx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 visible = false
@@ -29,7 +29,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_colors/font_color = Color(1, 0.784314, 0, 1)
 theme_override_font_sizes/font_size = 55
 text = "#1."
@@ -38,7 +38,7 @@ text = "#1."
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_colors/font_color = Color(1, 0.784314, 0, 1)
 theme_override_font_sizes/font_size = 55
 text = "---"
@@ -48,7 +48,7 @@ visible_characters = 3
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_colors/font_color = Color(1, 0.784314, 0, 1)
 theme_override_font_sizes/font_size = 55
 text = "0"
@@ -61,7 +61,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_colors/font_color = Color(0.696351, 0.696351, 0.696351, 1)
 theme_override_font_sizes/font_size = 55
 text = "#2. "
@@ -70,7 +70,7 @@ text = "#2. "
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_colors/font_color = Color(0.696351, 0.696351, 0.696351, 1)
 theme_override_font_sizes/font_size = 55
 text = "---"
@@ -80,7 +80,7 @@ visible_characters = 3
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_colors/font_color = Color(0.696351, 0.696351, 0.696351, 1)
 theme_override_font_sizes/font_size = 55
 text = "0"
@@ -93,7 +93,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_colors/font_color = Color(0.721569, 0.309804, 0, 1)
 theme_override_font_sizes/font_size = 55
 text = "#3."
@@ -102,7 +102,7 @@ text = "#3."
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_colors/font_color = Color(0.721569, 0.309804, 0, 1)
 theme_override_font_sizes/font_size = 55
 text = "---"
@@ -112,7 +112,7 @@ visible_characters = 3
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_colors/font_color = Color(0.721569, 0.309804, 0, 1)
 theme_override_font_sizes/font_size = 55
 text = "0"
@@ -125,7 +125,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_font_sizes/font_size = 55
 text = "#4."
 
@@ -133,7 +133,7 @@ text = "#4."
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_font_sizes/font_size = 55
 text = "---"
 visible_characters = 3
@@ -142,7 +142,7 @@ visible_characters = 3
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_font_sizes/font_size = 55
 text = "0"
 horizontal_alignment = 1
@@ -154,7 +154,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_font_sizes/font_size = 55
 text = "#5."
 
@@ -162,7 +162,7 @@ text = "#5."
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_font_sizes/font_size = 55
 text = "---"
 visible_characters = 3
@@ -171,7 +171,7 @@ visible_characters = 3
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_font_sizes/font_size = 55
 text = "0"
 horizontal_alignment = 1
@@ -179,13 +179,13 @@ horizontal_alignment = 1
 [node name="Continue" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 text = " continue "
 
 [node name="exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 text = " home "
 
 [node name="SingleColor" type="Sprite2D" parent="VBoxContainer"]
@@ -193,7 +193,7 @@ modulate = Color(0, 0, 0, 1)
 z_index = -1
 position = Vector2(256, 226)
 scale = Vector2(4.125, 3.5)
-texture = ExtResource("3_ffmll")
+texture = ExtResource("3_qljoc")
 
 [node name="Name" type="LineEdit" parent="."]
 visible = false
@@ -202,7 +202,7 @@ offset_left = 576.0
 offset_top = 256.0
 offset_right = 768.0
 offset_bottom = 320.0
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 placeholder_text = "---"
 alignment = 1
 max_length = 3
@@ -211,7 +211,7 @@ max_length = 3
 layout_mode = 0
 offset_left = -192.0
 offset_bottom = 64.0
-theme = ExtResource("2_m5rkx")
+theme = ExtResource("2_p4dlj")
 theme_override_font_sizes/font_size = 56
 text = "Name:"
 horizontal_alignment = 1
@@ -221,7 +221,7 @@ modulate = Color(0, 0, 0, 1)
 z_index = -1
 position = Vector2(192, 32)
 scale = Vector2(3.125, 0.625)
-texture = ExtResource("3_ffmll")
+texture = ExtResource("3_qljoc")
 
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]

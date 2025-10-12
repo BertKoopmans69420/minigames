@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cnkrewwweqa81"]
 
 [ext_resource type="Script" uid="uid://bh2kn171nx2y5" path="res://game/platformer/platformer.gd" id="1_rhu1t"]
-[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/pixel_text.tres" id="2_v41no"]
+[ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/tres/pixel_text.tres" id="2_v41no"]
 
 [node name="Platformer" type="Node2D"]
 script = ExtResource("1_rhu1t")

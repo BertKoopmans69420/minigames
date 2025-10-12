@@ -23,7 +23,7 @@ func start():
 func _process(delta):
 	#current_time = floori(Time.get_ticks_msec() / 1000) - floori(start_time / 1000)
 	if player.move:
-		if floori(Time.get_ticks_msec() / 1000) - floori(start_time / 1000) > current_time:
+		if floori(Time.get_ticks_msec() / 1000.0) - floori(start_time / 1000.0) > current_time:
 			$Timer.text = set_time_s(current_time)
 		
 		
@@ -33,7 +33,7 @@ func _process(delta):
 			spawn_enemy()
 			enemy_spawn_time -= enemy_spawn_time / 69
 			enemy_spawn_timer = enemy_spawn_time
-	current_time = floori(Time.get_ticks_msec() / 1000) - floori(start_time / 1000)
+	current_time = floori(Time.get_ticks_msec() / 1000.0) - floori(start_time / 1000.0)
 
 func spawn_enemy():
 	var pos:Vector2 = Vector2(0, 0)
@@ -68,7 +68,8 @@ func set_time_s(stime) -> String:
 	var time_text:String
 	var rest_time:int = stime
 	var s = str(rest_time % 60)
-	rest_time = (rest_time - int(s)) / 60
+	@warning_ignore("narrowing_conversion")
+	rest_time = (rest_time - int(s)) / 60.0
 	var m = str(rest_time % 60)
 	if int(m) == 0:
 		m = "-"
@@ -84,9 +85,11 @@ func set_time(mstime:int) -> String:
 	var time_text:String
 	var rest_time:int = mstime
 	var ms = str(rest_time % 1000)
-	rest_time = (rest_time - int(ms)) / 1000
+	@warning_ignore("narrowing_conversion")
+	rest_time = (rest_time - int(ms)) / 1000.0
 	var s = str(rest_time % 60)
-	rest_time = (rest_time - int(s)) / 60
+	@warning_ignore("narrowing_conversion")
+	rest_time = (rest_time - int(s)) / 60.0
 	var m = str(rest_time % 60)
 	if int(m) == 0:
 		m = "-"
@@ -112,3 +115,6 @@ func show_high_scores():
 	$Shooter_High_Scores.visible = true
 	$Shooter_High_Scores/Name.visible = true
 	$Shooter_High_Scores/Name.grab_focus()
+	if time < int(GameState.shooter_highscores[4][1]):
+		$Shooter_High_Scores.skip_name_enter()
+		

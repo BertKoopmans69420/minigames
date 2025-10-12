@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ckdcoucbylt1j"]
 
 [ext_resource type="Script" uid="uid://dwhl1hq6a41i" path="res://game/breakout/breakout_ball.gd" id="1_aw56y"]
-[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_2oeq7"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="2_2oeq7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yc0g5"]
 radius = 8.0

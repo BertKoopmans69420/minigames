@@ -4,7 +4,7 @@ class_name PongPlayer extends CharacterBody2D
 var speed = 300.0
 var cpu = true
 
-func _process(delta):
+func _process(_delta):
 	velocity.x = 0
 	var direction
 	if !cpu:

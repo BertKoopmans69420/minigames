@@ -18,20 +18,20 @@ func _process(delta):
 	var direction = Input.get_vector("Shooter left", "Shooter right", "Shooter up", "Shooter down")
 	if direction:
 		if move:
-			velocity.x = move_toward(velocity.x, direction.x * speed, speed / 2)
-			velocity.y = move_toward(velocity.y, direction.y * speed, speed / 2)
+			velocity.x = move_toward(velocity.x, direction.x * speed, speed / 2.0)
+			velocity.y = move_toward(velocity.y, direction.y * speed, speed / 2.0)
 			dir = direction
 			look_at(global_position + direction)
 		else:
 			velocity = Vector2(0, 0)
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed / 2)
-		velocity.y = move_toward(velocity.y, 0, speed / 2)
+		velocity.x = move_toward(velocity.x, 0, speed / 2.0)
+		velocity.y = move_toward(velocity.y, 0, speed / 2.0)
 
 
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info:
-		var collision_point = collision_info.get_position()
+		var _collision_point = collision_info.get_position()
 		#print(collision_point)
 		var collider = collision_info.get_collider()
 		if collider is ShooterEnemy:

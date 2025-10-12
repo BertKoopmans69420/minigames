@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://40wt8sb3qw2u"]
 
 [ext_resource type="Script" uid="uid://cergyd4ooeu1y" path="res://game/pong/pong_ball.gd" id="1_05rty"]
-[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_kmq64"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="2_kmq64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kt728"]
 size = Vector2(16, 16)

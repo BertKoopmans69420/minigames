@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b82s6hy0rte3a"]
 
-[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="1_mq5mi"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="1_mq5mi"]
 [ext_resource type="Script" uid="uid://0wx0owpao7yt" path="res://game/platformer/platformer_player.gd" id="1_o0obd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o0obd"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1daoy4pigyay"]
 
 [ext_resource type="Script" uid="uid://dj1w41mq2hd81" path="res://game/shooter/shooter_enemy.gd" id="1_gmj6j"]
-[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/single_color.png" id="2_ph2hn"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="2_ph2hn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nc2vi"]
 size = Vector2(51.2, 51.2)

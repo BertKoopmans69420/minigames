@@ -15,7 +15,7 @@ func _on_name_changed(new_text):
 
 
 
-func _on_ok_pressed(new_text):
+func _on_ok_pressed(_new_text):
 	if len(text) != 3:
 		$Name.grab_focus()
 		return
@@ -29,8 +29,14 @@ func _on_ok_pressed(new_text):
 	$VBoxContainer.visible = true
 	show_scores()
 	GameState.save()
-	
 
+func skip_name_enter():
+	GameState.shooter_highscores.append(["---", GameState.shooter.time])
+	$Name.visible = false
+	GameState.sort_highscores()
+	$VBoxContainer.visible = true
+	show_scores()
+	GameState.save()
 
 func _on_exit_pressed():
 	GameState.exit()

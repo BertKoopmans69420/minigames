@@ -27,7 +27,7 @@ func _ready():
 	points = 0
 	GameState.breakout = self
 	set_level()
-func _process(delta):
+func _process(_delta):
 	
 		
 	if $Bricks.get_children() == []:
@@ -75,8 +75,8 @@ func powerup(power:String):
 				ball.speed += 50
 		"safe floor (3 times)":
 				$Floors.remove_child($Floors.get_child(0))
-				var floor = floorscene.instantiate()
-				$Floors.add_child(floor)
+				var _floor = floorscene.instantiate()
+				$Floors.add_child(_floor)
 		"extra life":
 			lives += 1
 
@@ -101,6 +101,8 @@ func show_high_scores():
 	$Breakout_High_Scores.visible = true
 	$Breakout_High_Scores/Name.visible = true
 	$Breakout_High_Scores/Name.grab_focus()
+	if points < int(GameState.breakout_highscores[4][1]):
+		$Breakout_High_Scores.skip_name_enter()
 
 func end():
 	await get_tree().create_timer(2.0).timeout
