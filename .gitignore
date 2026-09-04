@@ -1,3 +1,32 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Godot runtime/export leftovers
+override.cfg
+export_presets.cfg
+/build/
+/builds/
+/export/
+*.pck
+*.exe
+*.x86_64
+*.apk
+*.aab
+*.dmg
+*.zip
+
+# AI tooling
+.daedalus/
+AI Files/
+.claude/settings.local.json
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
