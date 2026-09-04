@@ -22,8 +22,6 @@ func _on_ok_pressed(_new_text):
 		$Name.visible = false
 	GameState.breakout_highscores.append([text, GameState.breakout.points])
 	$Name.visible = false
-	#$Name/Label.visible = false
-	#$Name/Label/SingleColor.visible = false
 	GameState.sort_highscores()
 	$VBoxContainer.visible = true
 	show_scores()

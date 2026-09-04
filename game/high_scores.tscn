@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl5cy7icdno42"]
+[gd_scene format=3 uid="uid://dl5cy7icdno42"]
 
 [ext_resource type="Script" uid="uid://4mmdunfo1jnk" path="res://game/high_scores.gd" id="1_g42mx"]
 [ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/tres/pixel_text.tres" id="2_p4dlj"]
 [ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="3_qljoc"]
 
-[node name="High_Scores" type="Control"]
+[node name="High_Scores" type="Control" unique_id=116872293]
 z_index = 2
 layout_mode = 3
 anchors_preset = 15
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g42mx")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1370498604]
 visible = false
 layout_mode = 0
 offset_left = 320.0
@@ -22,10 +22,10 @@ offset_top = 102.0
 offset_right = 833.0
 offset_bottom = 546.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=867703045]
 layout_mode = 2
 
-[node name="1" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="1" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1899147764]
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -34,7 +34,7 @@ theme_override_colors/font_color = Color(1, 0.784314, 0, 1)
 theme_override_font_sizes/font_size = 55
 text = "#1."
 
-[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1512239152]
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -44,7 +44,7 @@ theme_override_font_sizes/font_size = 55
 text = "---"
 visible_characters = 3
 
-[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1350131397]
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -54,10 +54,10 @@ theme_override_font_sizes/font_size = 55
 text = "0"
 horizontal_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1865590030]
 layout_mode = 2
 
-[node name="2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+[node name="2" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=267648093]
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -66,7 +66,7 @@ theme_override_colors/font_color = Color(0.696351, 0.696351, 0.696351, 1)
 theme_override_font_sizes/font_size = 55
 text = "#2. "
 
-[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer2"]
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1606315073]
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -76,7 +76,7 @@ theme_override_font_sizes/font_size = 55
 text = "---"
 visible_characters = 3
 
-[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer2"]
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1506708226]
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -86,10 +86,10 @@ theme_override_font_sizes/font_size = 55
 text = "0"
 horizontal_alignment = 1
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=1651984988]
 layout_mode = 2
 
-[node name="3" type="Label" parent="VBoxContainer/HBoxContainer3"]
+[node name="3" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=13958114]
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -98,7 +98,7 @@ theme_override_colors/font_color = Color(0.721569, 0.309804, 0, 1)
 theme_override_font_sizes/font_size = 55
 text = "#3."
 
-[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer3"]
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=1966092719]
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -108,7 +108,7 @@ theme_override_font_sizes/font_size = 55
 text = "---"
 visible_characters = 3
 
-[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer3"]
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=583284495]
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -118,10 +118,10 @@ theme_override_font_sizes/font_size = 55
 text = "0"
 horizontal_alignment = 1
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=560641700]
 layout_mode = 2
 
-[node name="4" type="Label" parent="VBoxContainer/HBoxContainer4"]
+[node name="4" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=1657962354]
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -129,7 +129,7 @@ theme = ExtResource("2_p4dlj")
 theme_override_font_sizes/font_size = 55
 text = "#4."
 
-[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer4"]
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=1983093407]
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -138,7 +138,7 @@ theme_override_font_sizes/font_size = 55
 text = "---"
 visible_characters = 3
 
-[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer4"]
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=1295649667]
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -147,10 +147,10 @@ theme_override_font_sizes/font_size = 55
 text = "0"
 horizontal_alignment = 1
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer" unique_id=1308284412]
 layout_mode = 2
 
-[node name="5" type="Label" parent="VBoxContainer/HBoxContainer5"]
+[node name="5" type="Label" parent="VBoxContainer/HBoxContainer5" unique_id=901424295]
 custom_minimum_size = Vector2(95, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -158,7 +158,7 @@ theme = ExtResource("2_p4dlj")
 theme_override_font_sizes/font_size = 55
 text = "#5."
 
-[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer5"]
+[node name="Name" type="Label" parent="VBoxContainer/HBoxContainer5" unique_id=1470930251]
 custom_minimum_size = Vector2(140, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -167,7 +167,7 @@ theme_override_font_sizes/font_size = 55
 text = "---"
 visible_characters = 3
 
-[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer5"]
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer5" unique_id=59750986]
 custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_vertical = 2
@@ -176,26 +176,26 @@ theme_override_font_sizes/font_size = 55
 text = "0"
 horizontal_alignment = 1
 
-[node name="Continue" type="Button" parent="VBoxContainer"]
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=1534152141]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_p4dlj")
 text = " continue "
 
-[node name="exit" type="Button" parent="VBoxContainer"]
+[node name="exit" type="Button" parent="VBoxContainer" unique_id=730521560]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_p4dlj")
 text = " home "
 
-[node name="SingleColor" type="Sprite2D" parent="VBoxContainer"]
+[node name="SingleColor" type="Sprite2D" parent="VBoxContainer" unique_id=2033298903]
 modulate = Color(0, 0, 0, 1)
 z_index = -1
 position = Vector2(256, 226)
 scale = Vector2(4.125, 3.5)
 texture = ExtResource("3_qljoc")
 
-[node name="Name" type="LineEdit" parent="."]
+[node name="Name" type="LineEdit" parent="." unique_id=720188607]
 visible = false
 layout_mode = 0
 offset_left = 576.0
@@ -207,7 +207,7 @@ placeholder_text = "---"
 alignment = 1
 max_length = 3
 
-[node name="Label" type="Label" parent="Name"]
+[node name="Label" type="Label" parent="Name" unique_id=2021827568]
 layout_mode = 0
 offset_left = -192.0
 offset_bottom = 64.0
@@ -216,7 +216,7 @@ theme_override_font_sizes/font_size = 56
 text = "Name:"
 horizontal_alignment = 1
 
-[node name="SingleColor" type="Sprite2D" parent="Name/Label"]
+[node name="SingleColor" type="Sprite2D" parent="Name/Label" unique_id=1233837864]
 modulate = Color(0, 0, 0, 1)
 z_index = -1
 position = Vector2(192, 32)

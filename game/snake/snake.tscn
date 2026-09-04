@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://vfxtmfxg78rl"]
+
+[node name="Snake" type="Node2D"]

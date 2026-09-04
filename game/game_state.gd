@@ -7,6 +7,10 @@ var scenes:Dictionary = {	"pong": load("res://game/pong/pong.tscn"),
 							"breakout": load("res://game/breakout/breakout.tscn"),
 							"platformer": load("res://game/platformer/platformer.tscn"),
 							"shooter": load("res://game/shooter/shooter.tscn"),
+							"flapper": load("res://game/flapper/flapper.tscn"),
+							"2048": load("res://game/2048/2048.tscn"),
+							"snake": load("res://game/snake/snake.tscn"),
+							"speed_typing": load("res://game/speed_typing/speed_typing.tscn"),
 						}
 var MINIGAMES:MiniGames
 var pause_menu:PauseMenu
@@ -14,12 +18,17 @@ var pong:Pong
 var breakout:Breakout
 var platformer:Platformer
 var shooter:Shooter
+var speedtyping:SpeedTyping
 var empty_highscores:Array = [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
 var breakout_highscores:Array #= [["neh", 21034794], ["neh", 1258743], ["dan", 1780], ["---", 0], ["---", 0]]
 var shooter_highscores:Array #= [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
+var flapper_highscores:Array #= [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
+var game_2048_highscores:Array #= [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
+var snake_highscores:Array #= [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
 var platformer_saves:Dictionary = {"Nathan" : [1, 1, 3, 1, 1]}
 #platformer save= name: [last_world, last_level, lives, coins, current_page] (, powers?)
 var platformer_player:String = "Nathan"
+var in_menu:bool = false
 var platformer_save:Array = [1, 1, 3, 1, 1]
 const game_version = "0.3"
 const save_filename = "user://minigames.save"
@@ -46,6 +55,8 @@ func exit():
 
 func _input(event):
 	if event.is_action_pressed("ESC"):
+		if MINIGAMES.games.get_children() == []:
+			return
 		pause_menu.process_mode = Node.PROCESS_MODE_ALWAYS
 		pause_menu.visible = !pause_menu.visible
 		if GameState.platformer and GameState.platformer.in_level == true:
@@ -54,13 +65,13 @@ func _input(event):
 			pause_menu.exit.text = "home"
 		get_tree().paused = !get_tree().paused
 
+
+
 func sort_highscores():
-	breakout_highscores.sort_custom(highscore_sort)
-	while len(breakout_highscores) >= 6:
-		breakout_highscores.remove_at(5)
-	shooter_highscores.sort_custom(highscore_sort)
-	while len(shooter_highscores) >= 6:
-		shooter_highscores.remove_at(5)
+	for highscores in [breakout_highscores, shooter_highscores, flapper_highscores, game_2048_highscores, snake_highscores]:
+		highscores.sort_custom(highscore_sort) 
+		while len(highscores) >= 6: 
+			highscores.remove_at(5)
 
 func highscore_sort(a, b):
 	if a[1] > b[1]:
@@ -106,19 +117,31 @@ func load_from_file(filename:String):
 		var save_data:Dictionary = _load_json_line(save_file)
 		if not save_data.has("breakout_highscores"):
 			GameState.breakout_highscores = [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
+		else:
+			GameState.breakout_highscores = save_data["breakout_highscores"]
 		if not save_data.has("shooter_highscores"):
 			GameState.shooter_highscores = [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
+		else:
+			GameState.shooter_highscores = save_data["shooter_highscores"]
+		if not save_data.has("flapper_highscores"):
+			GameState.flapper_highscores = [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
+		else:
+			GameState.flapper_highscores = save_data["flapper_highscores"]
+		if not save_data.has("game_2048_highscores"):
+			GameState.game_2048_highscores = [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
+		else:
+			GameState.game_2048_highscores = save_data["game_2048_highscores"]
+		if not save_data.has("snake_highscores"):
+			GameState.snake_highscores = [["---", 0], ["---", 0], ["---", 0], ["---", 0], ["---", 0]]
+		else:
+			GameState.snake_highscores = save_data["snake_highscores"]
 		if not save_data.has("game_version"):
 			print("Missing version info. Ignoring save data")
 			return
 		
-		
-		
-		
 
-		GameState.breakout_highscores = save_data["breakout_highscores"]
-		GameState.shooter_highscores = save_data["shooter_highscores"]
-		#GameState.platformer_saves = save_data["platformer_saves"]
+		if save_data.has("platformer_saves"): 
+			GameState.platformer_saves = save_data["platformer_saves"]
 		print_save_data(filename)
 
 func _load_json_line(file:FileAccess) -> Variant:
@@ -141,7 +164,11 @@ func save_to_file(filename:String):
 		"game_version" : GameState.game_version,
 		"breakout_highscores" : GameState.breakout_highscores,
 		"shooter_highscores" : GameState.shooter_highscores,
-		"platformer_saves": GameState.platformer_saves
+		"flapper_highscores" : GameState.flapper_highscores,
+		"game_2048_highscores" : GameState.game_2048_highscores,
+		"snake_highscores" : GameState.snake_highscores,
+		"platformer_saves" : GameState.platformer_saves
+		
 	}
 	
 	var data = JSON.stringify(save_data, "", true, true)

@@ -68,7 +68,7 @@ func _on_exit_pressed():
 func _on_continue_pressed():
 	if game == GameState.breakout:
 		for i in GameState.breakout.bricks.get_children():
-			GameState.breakout.bricks.get_child(0).queue_free()
-		$VBoxContainer.visible = false
-		visible = false
-		#GameState.shooter._ready()
+			i.queue_free()
+	$VBoxContainer.visible = false
+	visible = false
+	game._ready()

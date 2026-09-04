@@ -1,11 +1,28 @@
 #This is a game I made to try coding games by myself.
-##The games:
-- Pong
-- Breakout
-- A small platformer
-- A top-down shooter
-- 2048?
-- suika game?
+##The games (in sprint order):
+
+DONE:
+- sprint 1 - Pong
+- sprint 2 - Breakout
+- sprint 3 - A top-down shooter
+- sprint 6 - Pause menu
+- sprint 7 - Highscores
+
+IN PROGRESS:
+- sprint 4 - Speed typing (demo works, the records dont get saved yet)
+- sprint 5 - Flappy bird (flying and walls work, you cant die or score yet)
+- sprint 8 - Save (highscores save, platformer progress now loads again)
+- sprint ? - A small platformer (menu works, only level 1-1 exists)
+
+NOT STARTED:
+- Snake (empty scene, the button already works)
+- 2048 (empty scene, the button already works)
+- Math minigame (math.gd is written but has no scene yet)
+- Suika game?
+
+##SUBSPRINTS (small stuff for myself, not games):
+- subsprint 1 - Line counter (DONE) (line_counter.gd, run it with File > Run in the editor)
+- subsprint 2 - F11 fullscreen (DONE)
 
 ##FOR LATER:
 EZ:

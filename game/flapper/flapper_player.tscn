@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bucnea8ojji5i"]
+
+[ext_resource type="Script" uid="uid://dc2bta7dp7i27" path="res://game/flapper/flapper_player.gd" id="1_m2mpv"]
+[ext_resource type="Texture2D" uid="uid://b85o700w4kjtj" path="res://resources/png/single_color.png" id="2_rsh5v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gev5k"]
+size = Vector2(32, 32)
+
+[node name="Flapper_Player" type="CharacterBody2D"]
+script = ExtResource("1_m2mpv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_rsh5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gev5k")

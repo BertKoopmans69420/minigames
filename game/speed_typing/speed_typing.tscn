@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://0ie4bgk1h8r6"]
+
+[ext_resource type="Script" uid="uid://clgaj3xrkrwat" path="res://game/speed_typing/speed_typing.gd" id="1_nro0e"]
+
+[node name="Speed_Typing" type="Node2D" unique_id=664080473]
+script = ExtResource("1_nro0e")
+
+[node name="Control" type="Control" parent="." unique_id=1236564387]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="goalhe" type="Label" parent="Control" unique_id=195121771]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -550.0
+offset_top = 62.83
+offset_right = 550.0
+offset_bottom = 163.82996
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 72
+text = "אבגדהוזחטיכלמנסעפצקרשתךםןףץ"
+horizontal_alignment = 1
+
+[node name="goalnl" type="Label" parent="Control" unique_id=299722267]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -550.0
+offset_top = 62.83
+offset_right = 550.0
+offset_bottom = 163.82996
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 72
+text = "abcdefghijklmnopqrstuvwxyz"
+horizontal_alignment = 1
+
+[node name="To_write2" type="Label" parent="Control" unique_id=1002366219]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -550.0
+offset_right = 550.0
+offset_bottom = 100.99994
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 53
+text = "Type this:"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Control" unique_id=1030896764]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 319.0
+offset_right = 1150.0
+offset_bottom = 435.0
+theme_override_font_sizes/font_size = 72
+alignment = 1
+keep_editing_on_text_submit = true
+
+[node name="time" type="Label" parent="Control" unique_id=2012036815]
+layout_mode = 0
+offset_top = 580.0
+offset_right = 154.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 48
+text = "59.999"
+
+[node name="record_timenl" type="Label" parent="Control" unique_id=360788794]
+layout_mode = 0
+offset_left = 998.0
+offset_top = 580.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 48
+text = "99.999"
+
+[node name="record_timehe" type="Label" parent="Control" unique_id=712183132]
+layout_mode = 0
+offset_left = 998.0
+offset_top = 580.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 48
+text = "99.999"
+
+[node name="nl" type="Button" parent="Control" unique_id=525409429]
+layout_mode = 0
+offset_left = 31.0
+offset_right = 61.0
+offset_bottom = 31.0
+text = "NL"
+
+[node name="he" type="Button" parent="Control" unique_id=1400510941]
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 31.0
+text = "HE"
+
+[connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="Control/nl" to="." method="_on_nl_pressed"]
+[connection signal="pressed" from="Control/he" to="." method="_on_he_pressed"]

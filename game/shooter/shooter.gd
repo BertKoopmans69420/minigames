@@ -107,14 +107,13 @@ func set_time(mstime:int) -> String:
 		time_text = str(ms)
 	return time_text
 	
-	
-	
 
 	
 func show_high_scores():
-	$Shooter_High_Scores.visible = true
-	$Shooter_High_Scores/Name.visible = true
-	$Shooter_High_Scores/Name.grab_focus()
+	$High_Scores.set_game("Shooter")
+	$High_Scores.visible = true
+	$High_Scores/Name.visible = true
+	$High_Scores/Name.grab_focus()
 	if time < int(GameState.shooter_highscores[4][1]):
-		$Shooter_High_Scores.skip_name_enter()
+		$High_Scores.skip_name_enter()
 		

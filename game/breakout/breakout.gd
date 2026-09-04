@@ -98,11 +98,12 @@ func set_level():
 		$Bricks.add_child(brick)
 
 func show_high_scores():
-	$Breakout_High_Scores.visible = true
-	$Breakout_High_Scores/Name.visible = true
-	$Breakout_High_Scores/Name.grab_focus()
+	$High_Scores.set_game("Breakout")
+	$High_Scores.visible = true
+	$High_Scores/Name.visible = true
+	$High_Scores/Name.grab_focus()
 	if points < int(GameState.breakout_highscores[4][1]):
-		$Breakout_High_Scores.skip_name_enter()
+		$High_Scores.skip_name_enter()
 
 func end():
 	await get_tree().create_timer(2.0).timeout

@@ -1,55 +1,80 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwe7jh510dvyk"]
+[gd_scene format=3 uid="uid://dwe7jh510dvyk"]
 
 [ext_resource type="Script" uid="uid://da2tl2tmf2px5" path="res://game/minigames.gd" id="1_8bkdo"]
 [ext_resource type="Theme" uid="uid://da66cxf8l3rq8" path="res://resources/tres/pixel_text.tres" id="2_k4qng"]
 [ext_resource type="PackedScene" uid="uid://bos8jfsys2uv7" path="res://game/pause_menu.tscn" id="3_qo22h"]
 
-[node name="Minigames" type="Node2D"]
+[node name="Minigames" type="Node2D" unique_id=529623821]
 script = ExtResource("1_8bkdo")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=521078320]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1849660496]
 layout_mode = 0
 offset_left = 276.0
-offset_top = 262.0
+offset_top = 222.0
 offset_right = 876.0
-offset_bottom = 386.0
+offset_bottom = 395.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=636265541]
 layout_mode = 2
 
-[node name="PONG" type="Button" parent="Control/VBoxContainer/HBoxContainer"]
+[node name="PONG" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=90287771]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_k4qng")
 text = " pOng "
 
-[node name="BREAKOUT" type="Button" parent="Control/VBoxContainer/HBoxContainer"]
+[node name="BREAKOUT" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=274192068]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_k4qng")
 text = " BREAKOUT "
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1114626481]
 layout_mode = 2
 
-[node name="PLATFORMER" type="Button" parent="Control/VBoxContainer/HBoxContainer2"]
+[node name="PLATFORMER" type="Button" parent="Control/VBoxContainer/HBoxContainer2" unique_id=379565317]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_k4qng")
 text = " PLATFORMER "
 
-[node name="SHOOTER" type="Button" parent="Control/VBoxContainer/HBoxContainer2"]
+[node name="SHOOTER" type="Button" parent="Control/VBoxContainer/HBoxContainer2" unique_id=492053393]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.65
 theme = ExtResource("2_k4qng")
 text = " shOOter "
 
-[node name="QUIT" type="Button" parent="Control"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=1675841798]
+layout_mode = 2
+
+[node name="FLAPPER" type="Button" parent="Control/VBoxContainer/HBoxContainer3" unique_id=1013240706]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_k4qng")
+text = " flapper "
+
+[node name="2048" type="Button" parent="Control/VBoxContainer/HBoxContainer3" unique_id=150931031]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.65
+theme = ExtResource("2_k4qng")
+text = " 2048 "
+
+[node name="SNAKE" type="Button" parent="Control/VBoxContainer/HBoxContainer3" unique_id=1519429167]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+theme = ExtResource("2_k4qng")
+text = " Snake "
+
+[node name="QUIT" type="Button" parent="Control" unique_id=660264088]
 layout_mode = 0
 offset_left = 476.0
 offset_top = 480.0
@@ -59,13 +84,27 @@ theme = ExtResource("2_k4qng")
 theme_override_font_sizes/font_size = 101
 text = "Quit"
 
-[node name="Games" type="Node2D" parent="."]
+[node name="speed_typing (demo)" type="Button" parent="Control" unique_id=978673190]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 38.0
+offset_right = 505.0
+offset_bottom = 93.0
+size_flags_horizontal = 3
+theme = ExtResource("2_k4qng")
+text = "typing practice"
 
-[node name="Pause_menu" parent="." instance=ExtResource("3_qo22h")]
+[node name="Games" type="Node2D" parent="." unique_id=1399527363]
+
+[node name="Pause_menu" parent="." unique_id=1131718701 instance=ExtResource("3_qo22h")]
 visible = false
 
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/PONG" to="." method="_on_pong_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer/BREAKOUT" to="." method="_on_breakout_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer2/PLATFORMER" to="." method="_on_platformer_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/HBoxContainer2/SHOOTER" to="." method="_on_shooter_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer3/FLAPPER" to="." method="_on_flapper_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer3/2048" to="." method="_on_2048_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/HBoxContainer3/SNAKE" to="." method="_on_snake_pressed"]
 [connection signal="pressed" from="Control/QUIT" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/speed_typing (demo)" to="." method="_on_speed_typing_pressed"]

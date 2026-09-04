@@ -33,7 +33,6 @@ func laser_destroy():
 func drop_powerup():
 	var power:String
 	var number =  randi_range(1, 21)
-	#var number = 2
 	match number:
 		1:
 			power = "laser"

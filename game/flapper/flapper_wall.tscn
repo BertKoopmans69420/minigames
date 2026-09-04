@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq2byra7eluid"]
+
+[ext_resource type="Texture2D" uid="uid://brioam8mbryur" path="res://resources/png/Flapper_wall.png" id="1_8lv2e"]
+[ext_resource type="Script" uid="uid://bf3kg6wkpdc4g" path="res://game/flapper/flapper_wall.gd" id="1_lx8rs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lx8rs"]
+size = Vector2(128, 512)
+
+[node name="Flapper_Wall" type="StaticBody2D"]
+script = ExtResource("1_lx8rs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8lv2e")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(128, 1160)
+rotation = 3.1415927
+texture = ExtResource("1_8lv2e")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64, 256)
+shape = SubResource("RectangleShape2D_lx8rs")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(64, 904)
+shape = SubResource("RectangleShape2D_lx8rs")
