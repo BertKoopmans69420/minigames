@@ -1,6 +1,6 @@
 # Sprints — Minigames
 
-_Last updated: 2026-09-01 · Current sprint: 8_
+_Last updated: 2026-09-11 · Current sprint: 8_
 
 The README numbers the work in sprints but lists them out of order. This document
 reconstructs them from the git history and the README's own numbering, then plans
@@ -10,10 +10,15 @@ what comes next.
 system — worked on until it is playable. There are no fixed dates; the numbering marks
 sequence, not calendar time.
 
+**Every sprint is a milestone.** Sprint _N_ is Milestone _N_ in `roadmap.md`, one for one.
+This document is the work; the roadmap is what the work is for. Adding a sprint here means
+adding the matching milestone there.
+
 **A subsprint** is a small piece of work that isn't a game and isn't for the player —
 tooling and quality-of-life things built for the author, alongside whatever sprint was
 running at the time. They are numbered separately because they don't belong in the game
-sequence, and they don't block a sprint from being called done.
+sequence, and they don't block a sprint from being called done. **Subsprints are not
+milestones** — the one-for-one rule applies to numbered sprints only.
 
 ---
 
@@ -85,13 +90,12 @@ per-game copies.
 **Left open:** the universal panel was written but the game scenes were never switched
 over → BACKLOG BUG-02, BUG-03.
 
-### Sprint (unnumbered) — Platformer, started
-**Goal:** world/level progression.
-**Delivered:** a world and level select menu with correct button gating from
-`last_completed_world` / `last_completed_level`; a `PlatformerPlayer` with gravity,
-jump and horizontal acceleration; the project's first TileSet-based floor; level 1-1.
-**Commits:** `5265914`, `9a47fcc`
-**Status:** the largest piece of unfinished work in the project. → ROADMAP Milestone 6.
+### Platformer, started — _now Sprint 12_
+Work on the platformer began here, between Sprints 7 and 8, and was paused rather than
+finished. It used to sit in this list unnumbered, which left it without a milestone. It is
+now **Sprint 12**, below, so that both the started half and the remaining half live in one
+sprint and one milestone. **Commits:** `5265914`, `9a47fcc`. → Sprint 12 / ROADMAP
+Milestone 12.
 
 ---
 
@@ -110,13 +114,14 @@ the menu and inside games, never while something else has grabbed input.
 Not persisted between runs — that belongs with an options screen (BACKLOG FEAT-03).
 
 ### Candidates for later subsprints
-- Export presets for Windows and Linux (BACKLOG FEAT-04) — the one that turns this into
-  something other people can run.
-- An options screen: volume, fullscreen default, clear high scores (FEAT-03).
 - A save-file inspector or "reset save" tool, for testing migrations without hunting
   down `user://minigames.save` by hand.
 - A headless test script for the pure logic — `set_time()`, `equation_solution()`,
   `highscore_sort()` (PROC-01).
+
+Export presets (FEAT-04) and the options screen (FEAT-03) used to be listed here. They are
+player-facing rather than author tooling, so they moved into **Sprint 15 — Shippable**,
+where they get a milestone of their own.
 
 ---
 
@@ -182,7 +187,74 @@ leaving the scene.
 
 Grid movement on a fixed cell size; growth on food pickup; self- and wall-collision;
 score into the shared table; game over and restart. First entirely new game since
-Sprint 5, and the warm-up for 2048's grid logic. → ROADMAP Milestone 7.
+Sprint 5, and the warm-up for 2048's grid logic.
+
+**Done when:** the Snake button leads to a game with a start, a fail state and a score.
+
+---
+
+## Sprint 12 — Platformer _(started, paused)_
+
+**Goal:** world/level progression.
+
+The half above, under _Completed_, is this sprint's first run: a world and level select
+menu with correct button gating from `last_completed_world` / `last_completed_level`; a
+`PlatformerPlayer` with gravity, jump and horizontal acceleration; the project's first
+TileSet-based floor; level 1-1.
+
+| # | Task | Backlog ID | Size |
+| --- | --- | --- | --- |
+| 1 | Levels 1-2 through 1-6 (World 1 complete) | — | L |
+| 2 | Coins, lives and a death/respawn loop instead of exiting to the menu on a fall | — | M |
+| 3 | Level completion writes `last_completed_world` / `last_completed_level` | — | S |
+| 4 | Named save slots (`platformer_saves` is already keyed by player name) | — | M |
+| 5 | Worlds 2 and 3, once World 1 proves the level pipeline | — | L |
+
+Task 4 of Sprint 8 — reading `platformer_saves` back on load (BUG-04) — belongs to this
+sprint's subject but was picked up there first, since it is a save-format fix.
+
+The largest piece of unfinished work in the project.
+
+**Done when:** a player can quit mid-progression and resume at the right level.
+
+---
+
+## Sprint 13 — 2048 _(planned)_
+
+Tile grid with merge rules; spawn rules for new tiles; game over detection when no legal
+move is left; score into the shared table. Reuses the grid thinking from Sprint 11. The
+button is wired to an empty scene and `game_2048_highscores` is already in the save format.
+
+**Done when:** the 2048 button leads to a game with a start, a fail state and a score.
+
+---
+
+## Sprint 14 — Math minigame _(planned)_
+
+`math.gd` is written but has no scene and is not routed. Give it a scene and a menu route;
+fix its dependency on the non-existent `GameState.in_menu`; and decide what it _is_ — a
+standalone entry, or a gate mechanic inside the platformer. It emits an `open_gate` signal,
+which suggests the latter; if so this sprint folds into Sprint 12 and the menu entry is
+dropped.
+
+**Done when:** the equations are reachable from somewhere, and `math.gd` no longer
+references a property that does not exist.
+
+---
+
+## Sprint 15 — Shippable _(planned)_
+
+Not a game — what turns the collection into something another person can run. Export
+presets for Windows and Linux; save migration from `0.3` onward exercised against a real
+old save; controls visible in-game; the three unhooked notes in `resources/Audio + SFX/`
+actually used; an options screen (volume, fullscreen default, clear high scores); and a
+pass on screen bounds so the games stop assuming 1152×648.
+
+Several of these have been sitting in _Candidates for later subsprints_ — export presets
+(FEAT-04) and the options screen (FEAT-03). They graduate to this sprint because shipping
+is player-facing, not author tooling.
+
+**Done when:** someone who does not have Godot installed can play the collection.
 
 ---
 
